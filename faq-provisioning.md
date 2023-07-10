@@ -50,7 +50,8 @@ Typically, this is easily done from the {{site.data.keyword.cos_full_notm}} cons
 In cases where the instance has been locked due to exceeding the maximum allowed size of a Lite instance it may be necessary to use the CLI. The plan ID for a standard {{site.data.keyword.cos_short}} instance is `744bfc56-d12c-4866-88d5-dac9139e0e5d` (if curious, this can be found by issuing the CLI command `ic catalog service cloud-object-storage`).  You'll need to know the name of the instance you are trying to upgrade.  For example, to upgrade the instance "My Object Storage", you can issue the command:
 
 ```sh
-ic resource service-instance-update "My Object Storage" --service-plan-id 744bfc56-d12c-4866-88d5- dac9139e0e5d
+ibmcloud resource service-instance-update "My Object Storage" --service-plan-id 744bfc56-d12c-4866-88d5- dac9139e0e5d
+## ic replaced with ibmcloud. "My Object Storage" is actually your instance that you had created on Cloud Object Storage. Instance Name or ID can be found from resource list, under storage section where you see your COS instance name. 
 ```
 
 ## Are bucket names case-sensitive?
